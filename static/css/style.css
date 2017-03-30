@@ -1,0 +1,16 @@
+body { 
+    padding-top: 70px; 
+    padding-left: 30px;
+    /*height:1500px;*/
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-collapse .reach-me{
+  text-align: center;
+}
+p {
+    color : black;
+}

@@ -8,82 +8,117 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/cb8029f505.js"></script>
     
 
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-            <ul class="nav row" id="navbar">
-                <li>
-                    <a href="#intro">
-                        <span class="glyphicon glyphicon-home"></span>
-                        <span class="text">INTRO</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about-me">
-                        <i class="fa fa-heartbeat" aria-hidden="true"></i>
-
-                        <span class="text">ABOUT ME</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#tech-stack">
-                        <i class="fa fa-cogs"></i>
-
-                        <span class="text">TECH STACK</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#experience">
-                        <i class="fa fa-signal"></i>
-                        <span class="text">EXPERIENCE</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#reach-me">
-                        <i class="fa fa-bullhorn"></i>
-                        <span class="text">STAY IN TOUCH</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav> <!-- end navbar -->
 
 
 
 <body>
 <!-- This will be 5 distinct divs: 1) intro 2)about me 3) tech stack/project 
 4) Experience 5)Contact me with a nav bar at the top-->
-    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-center">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-text">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav" >
+                    <li>
+                        <a href="#intro">
+                            <span class="navbar-text">
+                                <i class="fa fa-home"></i>INTRO
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about-me">
+                            <span class="navbar-text">
+                                <i class="fa fa-heartbeat"></i>ABOUT ME
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tech-stack">
+                            <span class="navbar-text">
+                                <i class="fa fa-cogs"></i>TECH STACK
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience">
+                            
+                            <span class="navbar-text">
+                                <i class="fa fa-signal"></i>EXPERIENCE
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reach-me">
+                            <span class="navbar-text">
+                                <i class="fa fa-bullhorn"></i>STAY IN TOUCH
+                            </span>
+                        </a>
+                    </li>
+                </ul>
 
 
-    <div class="container_fluid" style="margin-top: 1%;">
-
-    <section id="intro">
-        <p>Hi! i'm Dena. Hire me!</p>
-    </section>
-
-    <section id="about-me">
-        <p>Here's a little bit about me</p>
-    </section>
-    <section id="tech-stach">
-        <p>This is the tech stack i'm familiar with</p>
-    </section>
-    <section id="experience">
-        <p>Here's what i've been up to the last few years</p>
-    </section>
-    <section id="reach-me">
-        <p>I'm very reachable! Here are all the ways to contact me</p>
-        <div class="row">
-            <a href="https://github.com/denamwangi" <i id="github" class="fa fa-github fa-3x "></i></a>
-            <a href="https://www.linkedin.com/in/dena-metili-mwangi/" <i id="linkedin" class="fa fa-linkedin fa-3x"></i></a>
+            </div>            
         </div>
-    </section>
+    </nav> <!-- end navbar -->
+
+
+    <div class="container_fluid" >
+        <div class="row">
+            <section id="intro">
+                <p>Hi! i'm Dena. Hire me!</p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section id="about-me">
+                <p>Here's a little bit about me</p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section id="tech-stach">
+                <p>This is the tech stack i'm familiar with</p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section id="experience">
+                <p>Here's what i've been up to the last few years</p>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="reach-me">
+                <!-- <p>I'm very reachable! Here are all the ways to contact me</p> -->
+                <div class="col-sm-4">
+                    <a href="https://github.com/denamwangi" <i id="github" class="fa fa-github fa-3x "></i></a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.linkedin.com/in/dena-metili-mwangi/" <i id="linkedin" class="fa fa-linkedin fa-3x"></i></a>
+                </div>
+
+            </section>
+        </div>
+
+
     </div>
 
 
