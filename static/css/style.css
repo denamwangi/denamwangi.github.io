@@ -72,6 +72,9 @@ p {
 /*.tech-stack{
     min-height: 200px;
 }*/
+.experience{
+    min-height: 120px;
+}
 #experience{
     vertical-align: bottom;
 }
