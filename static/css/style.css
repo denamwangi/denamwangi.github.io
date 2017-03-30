@@ -43,8 +43,11 @@ hr {
 p {
     color : black;
 }
-span{
+.bold{
     font-weight: bold;
+}
+.ital{
+    font-style: italic;
 }
 .intro{
 
@@ -64,6 +67,13 @@ span{
 
   text-align: center;
 
+}
+
+.tech-stack{
+    min-height: 200px;
+}
+#experience{
+    vertical-align: bottom;
 }
 .section_title{
      text-align: center;
