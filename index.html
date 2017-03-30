@@ -7,6 +7,8 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/static/js/d3_bubbles.js"></script>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Lato" rel="stylesheet">
@@ -58,7 +60,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#experience">
+                        <a href="#pre-tech">
                             
                             <span class="navbar-text">
                                 <i class="fa fa-signal"></i>PRE-TECH
@@ -99,7 +101,7 @@
         </div>
 
         <div class="row about-me" >
-            <!-- <section id="about-me"> -->
+            <section id="about-me">
                 
                 <div class="col-sm-3 col-lg-3">
                     <img src='static/img/profile pic.jpg' class="img-thumbnail img-fluid" alt="Cinque Terre" width="150" height="120" align="left" id="profile-pic">
@@ -123,30 +125,65 @@
                 </div>
 
 
-            <!-- </section> -->
+            </section>
         </div>
 <hr >
-        <div class="row ">
+        <div class="row tech-stack">
             <h2 class="section_title">Tech-Stack</h2>
         </div>
         <div class="row tech-stack">
             <section id="tech-stach">
-               
+                    <div class="col-sm-3  experience_pieces">
+                        <p class="bold">Back-end</p>
+                        <p class="ital"> Python, Flask, Postgresql</p>
+                    </div>
+
+
+                    <div class="col-sm-3  experience_pieces">
+                        <p class="bold">Front-end</p>
+                        <p class="ital">Javascript, HTML, CSS, Bootstrap, D3, JQuery, Ajax</p>
+                    </div>
+
+                    <div class="col-sm-3  experience_pieces">
+                        <p class="bold">Data</p>
+                        <p class="ital">Econometrics, Regressions, Geo-analysis, Stata, ArcGis, Survey CTO, NLP</p>
+                    </div>
+
+                    <div class="col-sm-3  experience_pieces">
+                        <p class="bold">CS Concepts</p>
+                        <p class="ital">Object Oriented programming, Data structures, Algorithms</p>
+                    </div>
             </section>
         </div>
-<hr >
+
+<!--     <div class="row">
+        <div class='cat_bubbles_container'>
+            <div id='cat_bubbles'></div>
+        </div>
+    </div> -->
         <div class="row ">
+                    <div class="col-sm-12  project_detail">
+                        <p class="bold">Project: Bubble Reccs web app</p>
+                        <p class="ital"> A web app that combines the powers of natural language processing using TextRank with data visualization using
+D3 to synthesize millions of yelp reviews into sets of keywords and short summaries for each business. Users get a
+snapshot of each business allowing for quicker decisions. Once chosen users may get directions, receive a text with
+restaurant info using Twilio, or request Lyft cost and time estimates.
+APIs: Google Maps, Twilio, Lyft Github: denamwangi/Yelp_wordbubble_recs</p>
+                    </div>
+        </div>
+<hr >
+        <div class="row pre-tech">
             <h2 class="section_title">Prologue</h2>
           
         </div>
         <div class="row ">
                     <p class="personal_blurb">
-                        I spent at least <span class="bold">80 percent </span> of my time <span class="bold">coding </span>in C based Stata analyzing household surveys. In my current role I <span class="bold">quickly learned</span> the code base, studied ODK based survey CTO and ArcGIS and had a survey deployed and running in the field within 6 weeks. Additionally, I run quality checks on multiple streams of data for an impact evaluation on transportation in Rwanda. tech and excited to use my growing skill set to develop <span class="bold">innovative</span> ways to solve them.
+                        I spent at least <span class="bold">80 percent </span> of my time <span class="bold">coding </span>in C based Stata analyzing household surveys. In my current role I <span class="bold">quickly learned</span> the code base, studied ODK based survey CTO and ArcGIS and had a survey deployed and running in the field within 6 weeks. Additionally, I run quality checks on multiple streams of data for an impact evaluation on transportation in Rwanda. 
 
                     <p> 
         </div></br>
         <div class="row experience">
-            <section id="experience">
+            <section id="pre-tech">
 
                     <div class="col-sm-3  experience_pieces">
                         <p class="bold">The World Bank</p>
@@ -203,3 +240,26 @@
 
 
 </body>
+<script>
+// var results =[ {"text": "cheese", "size" : 5, "group": "2"},
+//                 {"text": "blue", "size" : 5, "group": "2"}
+//             ];
+// var width = 1000,
+//     height = 500,
+//     padding = 6, // separation between same-color nodes
+//     clusterPadding = 6, // separation between different-color nodes
+//     maxRadius = 5;
+
+//     function make_category_bubbles(results){
+//         // Drop and re-add a container that will hold all the bubbles
+//         console.log("HEEERE"+results)
+//         $('#cat_bubbles').remove()
+//         $('.cat_bubbles_container').append('<div class="row"><div id="cat_bubbles"></div><div')
+        
+//         multiD3(results, 'cat_bubbles');
+
+//     }
+
+// make_category_bubbles(results)
+
+// </script>
