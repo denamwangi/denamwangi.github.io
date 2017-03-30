@@ -18,8 +18,19 @@ body {
 }
 .bottom {
   text-align: center;
+  vertical-align: text-bottom;
   background-color: black;
   height: 100px;
+}
+.logos{
+    position: relative;
+
+    
+    
+    /*height: 100px;*/
+    /*vertical-align: middle;*/
+
+
 }
 
 hr {
@@ -75,6 +86,7 @@ transform: translate(-50%, -50%);
 #profile-pic{
 
     box-shadow: 10px 10px 5px #888888;
+    vertical-align: middle;
     
 }
 
@@ -89,11 +101,15 @@ font-size: 60px;
 
 }
 
-
+.white_text{
+    color: white;
+}
 .fa-github{
     color: #9E2500;
 }
-
+.fa-envelope-o{
+    color: #9E2500;
+}
 .fa-linkedin{
     color: #9E2500;
 }
