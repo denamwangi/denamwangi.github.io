@@ -1,0 +1,57 @@
+# Site setings
+name: 'Dena'
+description: 'Developer | Speaker'
+meta_description: 'Personal website'
+logo:
+# Author image is used in site sidebar and greetings in the home page hero text
+author:
+  image: 'authorimage.jpg'
+  greetings: "Hi there! My name is Dena Metili Mwangi. I'm a web developer, author and speaker based in Oakland, CA. It’s nice to meet you."
+favicon: 'assets/images/favicon.ico'
+baseurl: 
+production_url: https://denamwangi.com/
+disqus:
+mailchimp_url:
+# Add your GA Tracking Id
+ga_analytics: 
+
+# Contact form setings
+email: youremail@email.com
+contact_page_description:
+thankyou_page_description: "Your message has been successfully sent. I'll get back to you very soon!"
+
+# Social links
+twitter: 'dena.mwangi'
+github: 'denamwangi'
+linkedin: 'dena-metili-mwangi'
+
+# Navigation
+navigation:
+  - text: Home
+    url: /about
+  - text: Talks
+    url: /talks
+  - text: Contact Me
+    url: /contact
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-tagsgenerator
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalinks
+permalink: /:title
+
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed

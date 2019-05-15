@@ -1,284 +1,43 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <title>Dena Metili Mwangi</title>
+---
+layout: default
+title: Home
+---
+<main id="main" class="site-main">
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script type="text/javascript" src="/static/js/d3_bubbles.js"></script>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Lato" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/cb8029f505.js"></script>
-    
+{% if page.url == "/blogs" %}
+<div class="hero inner">
+    <p class="hero-text">{{ site.author.greetings }}</p>
+</div>        
+{% endif %}
 
-    <link rel="stylesheet" href="static/css/style.css">
+{% if page.url == "/blogs" %}
+<!-- Featured-->
+<div id="featured-posts" class="featured-posts">
+    {% for post in site.posts %}
+    {% if post.featured == true %}
+    {% include featuredbox.html %}
+    {% endif %}
+    {% endfor %}
+</div>
 
+{% endif%}
 
-
-    <!-- Google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-96491509-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
-</head>
-
-
-
-
-<body>
-<!-- This will be 5 distinct divs: 1) intro 2)about me 3) tech stack/project 
-4) Experience 5)Contact me with a nav bar at the top-->
-
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-center">
-        <div class="container-fluid">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-text">
-                    <i class="fa fa-bars"></i>
-                </span>
-            </div>
-
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav" >
-                    <li>
-                        <a href="#intro">
-                            <span class="navbar-text">
-                                <i class="fa fa-home"></i>INTRO
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#about-me">
-                            <span class="navbar-text">
-                                <i class="fa fa-heartbeat"></i>ABOUT ME
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#tech-stack">
-                            <span class="navbar-text">
-                                <i class="fa fa-cogs"></i>TECH STACK
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#pre-tech">
-                            
-                            <span class="navbar-text">
-                                <i class="fa fa-signal"></i>PRE-TECH
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#reach-me">
-                            <span class="navbar-text">
-                                <i class="fa fa-bullhorn"></i>STAY IN TOUCH
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-
-
-            </div>            
-        </div>
-    </nav> <!-- end navbar -->
-
-
-    <div class="container_fluid" >
-        <div class="row intro" style="background-image: url('static/img/geometric_orange.jpg') ">
-            <section id="intro">
-
-
-                <h1 class="inverse-text ">DENA METILI MWANGI</h1>
-                <h3 class="inverse-text thin-font">SOFTWARE ENGINEER </h3> 
-                <p><i class="fa fa-plus" aria-hidden="true"></i><p>                
-                <h3 class="inverse-text thin-font">ECONOMICS DATA ANALYST</h3>
-
-            </section>
-        </div>
-
-        <hr >
-        <div class="row ">
-            <h2 class="section_title">About Me</h2>
-        </div>
-
-        <div class="row about-me" >
-            <section id="about-me">
-                
-                <div class="col-sm-3 col-lg-3">
-                    <img src='static/img/profile pic.jpg' class="img-thumbnail img-fluid" alt="Cinque Terre" width="150" height="120" align="left" id="profile-pic">
-                </div>
-
-                <div class="col-sm-6 col-lg-6 ">
-                    <p class="personal_blurb">
-                        I graduated from <span class="bold">Duke University</span> with a M.A. in <span class="bold">Economics </span>
-                        focused on international development. I've spent the last few years working as a <span class="bold">Data Analyst</span> for various think tanks in Washington D.C. where my passion for breathing life into data and telling the hidden stories underneath bloomed. 
-
-                        Constantly in search of technology to do this better, I started learning Python.
-                    </p>
-                    <p class="personal_blurb">
-
-                        I chose to bolster my analytical skills by pursuing a <span class="bold">Software Engineering Fellowship</span> at <span class="bold">Hackbright Academy</span> where I learned computer science fundamentals and web development.
-                    </p>
-                    <p class="personal_blurb">
-                        I'm intrigued by <span class="bold">data-related problems </span>in tech and excited to use my growing skill set to develop <span class="bold">innovative</span> ways to solve them.
-
-                    <p>    
-                </div>
-
-
-            </section>
-        </div>
-<hr >
-        <div class="row tech-stack">
-            <h2 class="section_title">Tech-Stack</h2>
-        </div>
-        <div class="row tech-stack">
-            <section id="tech-stack">
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">Back-end</p>
-                        <p class="ital"> Python, Flask, Postgresql</p>
-                    </div>
-
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">Front-end</p>
-                        <p class="ital">Javascript, HTML, CSS, Bootstrap, D3, JQuery, Ajax</p>
-                    </div>
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">Data</p>
-                        <p class="ital">Econometrics, Regressions, Geo-analysis, Stata, ArcGis, Survey CTO, NLP</p>
-                    </div>
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">CS Concepts</p>
-                        <p class="ital">Object Oriented programming, Data structures, Algorithms</p>
-                    </div>
-            </section>
-        </div>
-
-<!--     <div class="row">
-        <div class='cat_bubbles_container'>
-            <div id='cat_bubbles'></div>
-        </div>
-    </div> -->
-        <div class="row ">
-                    <div class="col-sm-12  project_detail">
-                        <p class="bold">Project: Bubble Reccs web app</p>
-                        <p class="ital"> A web app that combines the powers of natural language processing using TextRank with data visualization using
-D3 to synthesize millions of yelp reviews into sets of keywords and short summaries for each business. Users get a
-snapshot of each business allowing for quicker decisions. Once chosen users may get directions, receive a text with
-restaurant info using Twilio, or request Lyft cost and time estimates.
-APIs: Google Maps, Twilio, Lyft Github: denamwangi/Yelp_wordbubble_recs</p>
-                    </div>
-        </div>
-<hr >
-        <div class="row pre-tech">
-            <h2 class="section_title">Prologue</h2>
-          
-        </div>
-        <div class="row col-sm-12">
-                    <p class="personal_blurb">
-                        I spent at least <span class="bold">80 percent </span> of my time <span class="bold">coding </span>in C based Stata analyzing household surveys. 
-
-                        In my current role I <span class="bold">quickly learned</span> the code base, studied ODK based <span class="bold">survey CTO and ArcGIS </span>and had a <span class="bold">survey deployed </span>and running in the field within 6 weeks.
-
-                            Additionally, I run <span class="bold">data quality checks </span>on multiple streams of data for an impact evaluation on transportation in Rwanda. 
-                    </p>
-
-                     
-        </div></br>
-        <div class="row experience">
-            <section id="pre-tech">
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">The World Bank</p>
-                        <p class="ital">Data analysis consultant (DIME)</p>
-                    </div>
-
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">The International Food Policy Research Institute</p>
-                        <p class="ital">Research analyst</p>
-                    </div>
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">Oxfam America</p>
-                        <p class="ital">Technical research consultant</p>
-                    </div>
-
-                    <div class="col-sm-3  experience_pieces">
-                        <p class="bold">Clinton Foundation</p>
-                        <p class="ital">Research intern</p>
-                    </div>
-
-            </section>
-        </div>
-
-        <div class="row bottom">
-            <h2 class="section_title white_text">Contact Me</h2>
-            
-        </div>
-        <div class="row bottom">
-            <h4 class="white_text"> Have a position that could benefit from a  data minded developer?</h4>
-        </div>
-        <div class="row bottom">
-                <section id="reach-me">
-                    <!-- <p>I'm very reachable! Here are all the ways to contact me</p> -->
-                    <div class="col-sm-2 col-sm-offset-2 logos">
-                        <a href="https://github.com/denamwangi" <i id="github" class="fa fa-github fa-4x "></i></a>
-                    </div>
-                    <div class="col-sm-2 logos">
-                        <a href="https://www.linkedin.com/in/dena-metili-mwangi/" <i id="linkedin" class="fa fa-linkedin fa-4x"></i></a>
-                    </div>
-                    <div class="col-sm-2 logos">
-                        <a href="https://twitter.com/denamwangi" <i id="twitter" class="fa fa-twitter fa-4x"></i></a>
-                    </div>
-                    <div class="col-sm-2 logos">
-                        <a href="mailto:dena.mwangi@gmail.com" <i id="mail" class="fa fa-envelope-o fa-4x"></i></a>
-                    </div>
-
-                </section>
-        </div>
-
-
+<!-- Posts Index -->
+<div class="post-feed inner">
+    {% if page.url == "/blogs" %}
+    <div class="post-feed-title">Latest Articles</div>
+    {% endif %}
+    <div class="post-feed inner-wide">
+        {% for post in paginator.posts %}
+            {% include postbox.html %}
+        {% endfor %}
     </div>
+</div>
+<!-- Pagination-->
+{% include pagination.html %}
+{% if site.mailchimp_url %}
+    {% include newsletter-box.html %}
+{% endif %}
+</main>
 
 
-</body>
-<script>
-// var results =[ {"text": "cheese", "size" : 5, "group": "2"},
-//                 {"text": "blue", "size" : 5, "group": "2"}
-//             ];
-// var width = 1000,
-//     height = 500,
-//     padding = 6, // separation between same-color nodes
-//     clusterPadding = 6, // separation between different-color nodes
-//     maxRadius = 5;
-
-//     function make_category_bubbles(results){
-//         // Drop and re-add a container that will hold all the bubbles
-//         console.log("HEEERE"+results)
-//         $('#cat_bubbles').remove()
-//         $('.cat_bubbles_container').append('<div class="row"><div id="cat_bubbles"></div><div')
-        
-//         multiD3(results, 'cat_bubbles');
-
-//     }
-
-// make_category_bubbles(results)
-
-// </script>
