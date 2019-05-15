@@ -21,14 +21,14 @@ contact_page_description:
 thankyou_page_description: "Your message has been successfully sent. I'll get back to you very soon!"
 
 # Social links
-twitter: 'dena.mwangi'
+twitter: 'denamwangi'
 github: 'denamwangi'
 linkedin: 'dena-metili-mwangi'
 
 # Navigation
 navigation:
   - text: Home
-    url: /about
+    url: /
   - text: Talks
     url: /talks
   - text: Contact Me
